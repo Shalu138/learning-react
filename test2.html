@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-banner{
+            height: 100vh;
+            background-color: blue;
+            position: relative;
+        }
+        .animated-img{
+            width: 150px;
+            position: absolute;
+            transition: 2s ease-in-out;
+            transform: translate(0, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="main-banner" id="banner" onclick="animateImg(event)"> -->
+        <div class="main-banner" id="banner">
+        <img src="https://www.wizard.financial/static/media/wizaart-img.56787174.gif" alt="animateImgd-img" class="animated-img">
+    </div>
+
+    <script>
+
+        // function animateImg(event) {
+        //     let x = event.clientX - 100;
+        //     let y = event.clientY - 15;
+        //     let text = "X coords: " + x + ", Y coords: " + y;
+        //     console.log(text);
+        //     var banner = document.getElementById('banner');
+        //     var img = document.querySelector('.animated-img').style.transform = " translate(" + x + "px," + y + "px)";
+        // }
+        var banner = document.getElementById('banner');
+        banner.addEventListener("click", function(){
+            let x = event.clientX - 100;
+            let y = event.clientY - 15;
+            let text = "X coords: " + x + ", Y coords: " + y;
+            console.log(text);
+            var banner = document.getElementById('banner');
+            var img = document.querySelector('.animated-img').style.transform = " translate(" + x + "px," + y + "px)";
+       });
+    </script>
+</body>
+</html>
